@@ -20,4 +20,6 @@ We could consider moving away from EC2 entirely and utilise a serverless archite
 # Recommendation
 The first thing to try is using GPU instances with increased batch size to improve throughput, followed by quantising the model weights. If more savings are required, then we would implement the serversless architecture approach detailed above.
 
+The serverless architecture approach detailed above would be expected to be the more const effective solution as Lambda only occurs costs when it's executing, and the SageMaker endpoints can scale down as demand drops. There is also the advantage of not having to maintain and upgrade operating systems and software as would have to be done when maintaining a fleet of EC2 instances.
+
 
