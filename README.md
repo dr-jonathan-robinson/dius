@@ -12,7 +12,9 @@ The packange `ydata-profiling` was used to explore the training features:
 The output of the profiling report is in `profile_report.html`.
 
 # Model Building
-The `tensorflow` package was used (due to familiarity). The numerical inputs are normalised and the categorical input is one-hot encoded. The `tensorflow` routines were used for this as the parameters can be packaged with the model. The model concatenates the numeric and categorical features and then passes them through a series of dense layers with dropout and batch normalisation. L1 and L2 regularisation was used to prevent overfitting (maybe a little overkill for this project). After a little experimentation the layers consisted of 256, 128, 64, 32, 16 units. The model has a total of `13,844` trainable parameters. Early stopping was for efficiency and to prevent overfitting. Although the `epochs` were set to 100, early stopping stopped the training after 14 epochs, taking the weights after epoch 6. These epoch numbers may vary slightly with each model build. 
+The `tensorflow` package was used (due to familiarity). The model building and analysis was done in a jupyter notebook, `build_model.ipynb`. This has been exported to a **python script** `build_model.py` as we would use a script in production rather than a notebook. 
+
+The numerical inputs are normalised and the categorical input is one-hot encoded. The `tensorflow` routines were used for this as the parameters can be packaged with the model. The model concatenates the numeric and categorical features and then passes them through a series of dense layers with dropout and batch normalisation. L1 and L2 regularisation was used to prevent overfitting (maybe a little overkill for this project). After a little experimentation the layers consisted of 256, 128, 64, 32, 16 units. The model has a total of `13,844` trainable parameters. Early stopping was for efficiency and to prevent overfitting. Although the `epochs` were set to 100, early stopping stopped the training after 14 epochs, taking the weights after epoch 6. These epoch numbers may vary slightly with each model build. 
 
 ![Training history](training_history.png)
 
