@@ -49,7 +49,7 @@ def load_model():
     """Load the trained model and categorical mapping on startup"""
     global model, cat_mapping
     
-    model_path = os.environ.get('MODEL_PATH', 'dius_model.hdf5')
+    model_path = os.environ.get('MODEL_PATH', 'dius_model.keras')
     mapping_path = os.environ.get('MAPPING_PATH', 'categorical_mapping.joblib')
     
     # Load the TensorFlow model

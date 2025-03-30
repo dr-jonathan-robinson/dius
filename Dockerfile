@@ -11,7 +11,7 @@ RUN pip install --no-cache-dir -r requirements.docker.txt
 
 
 COPY categorical_mapping.joblib .
-COPY dius_model.hdf5 .
+COPY dius_model.keras .
 COPY serve.py .
 
 EXPOSE 5000
